@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Premium Military Aviation Palette - Deep Navy, Steel, White, Gold Accent */
+    --background: 0 0% 100%;
+    --foreground: 210 30% 20%;
+    --card: 0 0% 98%;
+    --card-foreground: 210 30% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 30% 20%;
+    --primary: 210 30% 20%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 20% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 20% 85%;
+    --muted-foreground: 215 20% 40%;
+    --accent: 45 95% 55%;
+    --accent-foreground: 210 30% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 30% 20%;
+    --chart-1: 210 30% 20%;
+    --chart-2: 215 20% 40%;
+    --chart-3: 45 95% 55%;
+    --chart-4: 210 20% 85%;
+    --chart-5: 215 20% 40%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 210 30% 10%;
+    --foreground: 0 0% 95%;
+    --card: 210 30% 18%;
+    --card-foreground: 0 0% 95%;
+    --popover: 210 30% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 210 30% 20%;
+    --secondary: 215 20% 50%;
+    --secondary-foreground: 210 30% 20%;
+    --muted: 210 30% 30%;
+    --muted-foreground: 215 20% 50%;
+    --accent: 45 95% 55%;
+    --accent-foreground: 210 30% 20%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 30% 30%;
+    --input: 210 30% 30%;
+    --ring: 45 95% 55%;
+    --chart-1: 0 0% 95%;
+    --chart-2: 215 20% 50%;
+    --chart-3: 45 95% 55%;
+    --chart-4: 210 30% 30%;
+    --chart-5: 215 20% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print\:bg-white {
+    background-color: white !important;
+  }
+
+  .print\:min-h-auto {
+    min-height: auto !important;
+  }
+
+  .print\:py-12 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  body {
+    background-color: white !important;
+    color: #1b2741 !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+    margin: 0 !important;
+    padding: 20px 0 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  a {
+    color: #1b2741 !important;
+    text-decoration: underline;
+  }
+
+  button {
+    display: none !important;
+  }
+}
